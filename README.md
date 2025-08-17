@@ -15,10 +15,8 @@ As the name suggests, It is a bad chess game I built. But, It's fully functional
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0a6f27eb-5eb8-4722-bdf6-d73873ac58c7" />
 - As you can see it shows the available legal moves, captures and the king is castled.
                                        
-
-
-Check detection
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b4af76ea-31ea-4fcc-a3b7-27a9959b7db8" />
+You can notice the game detecting the king is in check
 
 ## Installation
 
