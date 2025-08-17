@@ -16,7 +16,7 @@ As the name suggests, It is a bad chess game I built. But, It's fully functional
 - As you can see it shows the available legal moves, captures and the king is castled.
                                        
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9563ee59-d7ad-4848-a6ac-67e4a50ae956" />
+
 Check detection
 
 
