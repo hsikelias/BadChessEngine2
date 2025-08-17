@@ -1,19 +1,14 @@
-"""
-Simplified Chess Game - Core functionality only
-Clean board with sound effects and all chess rules working
-"""
-
 import pygame as p
 import os
 import sys
 import ChessEngine
 
-# Initialize pygame mixer FIRST
+# initializes pygame mixer
 p.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=512)
 p.mixer.init()
 p.init()
 
-# Board settings
+# board settings
 BOARD_SIZE = 640
 WINDOW_WIDTH = BOARD_SIZE
 WINDOW_HEIGHT = BOARD_SIZE
@@ -22,7 +17,7 @@ DIMENSION = 8
 SQ_SIZE = BOARD_SIZE // DIMENSION
 MAX_FPS = 60
 
-# Simple color scheme
+
 COLORS = {
     'light_square': p.Color("#f0d9b4"),
     'dark_square': p.Color("#b58863"),
@@ -39,7 +34,6 @@ SOUNDS = {}
 
 
 class SimpleChess:
-    """Simplified chess game with core functionality"""
 
     def __init__(self):
         self.screen = p.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
