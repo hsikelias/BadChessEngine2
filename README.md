@@ -1,32 +1,28 @@
-# Chess Engine in Python(Still under active development)
+# Bad Chess Game
 
-A fully functional chess game built with Python and Pygame, featuring complete chess rules implementation, sound effects, and a standard graphical interface.
+As the name suggests, It is a bad chess game I built. But, It's fully functional, built with Python and Pygame, featuring complete chess rules implementation, sound effects, and a standard graphical interface.
 
 ## Features
-
-- ✅ Complete chess rule implementation
-- ✅ Legal move validation and check detection
-- ✅ Checkmate and stalemate detection
-- ✅ Castling (kingside and queenside)
-- ✅ Pawn promotion (auto-promotes to queen)
-- ✅ Pin detection (pieces protecting the king)
-- ✅ Move undo functionality (press 'Z')
-- ✅ Sound effects for different move types
-- ✅ Clean graphical interface with piece images
+- Complete Chess Rules
+- Visual Interface
+- Sound Effects
+- Castling, en passant, pawn promotion(only queen for now)
+- Check/stalemate/ checkmate detection 
+- Board flips/ Move validation/ undoing moves
 
 ## Screenshots
 
 ## Installation
 
 ### Prerequisites
-- Python 3.7+
+- Python 3.6+ (Download from python.org)
 - Pygame
 
 ### Setup
 1. Clone this repository:
 ```bash
-git clone https://github.com/hsikelias/BadChessEngine.git
-cd BadChessEngine
+git clone https://github.com/hsikelias/BadChessEngine2.git
+cd BadChessEngine2
 ```
 
 2. Install Pygame:
@@ -72,15 +68,20 @@ Chess/
     └── ...
 ```
 
-## Sound Effects
+## Game Architecture
 
-The game includes audio feedback for:
-- Regular moves
-- Rook captures (special sacrifice sound ft.GothamChess)
-- Check warnings
-- Checkmate/stalemate notifications
-- Castling moves
-- Pawn promotions
+# ChessEngine.py
+
+GameState: Manages the board, pieces, and game rules
+Move: Represents individual chess moves
+CastleRights: Tracks castling permissions
+
+# ChessMain.py
+
+SimpleChess: Main game class handling graphics and user input
+Graphics: Board rendering and piece display
+Input: Mouse and keyboard event handling
+
 
 ## Technical Implementation
 
@@ -90,17 +91,19 @@ The game includes audio feedback for:
 - **Move Validation**: Comprehensive legal move checking prevents illegal moves
 - **Chess Notation**: Supports standard algebraic notation output
 
-## Future Enhancements
 
-- [ ] AI opponent implementation
-- [ ] Move highlighting and suggestions
-- [ ] En passant capture
-- [ ] Game save/load functionality
-- [ ] Online multiplayer support
-- [ ] Opening book integration
-- [ ] Move timer/clock
+## Future plans and Contributing
 
-## Contributing
+Potential improvements you could add:
+
+AI opponent
+Online multiplayer
+Move history display
+Time controls
+Tournament mode
+Better graphics and animations
+Save/load game functionality
+
 
 Feel free to fork this project and submit pull requests for improvements!
 
