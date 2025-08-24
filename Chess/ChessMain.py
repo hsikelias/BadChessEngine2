@@ -146,6 +146,7 @@ class SimpleChess:
             'checkmate': 'checkmate.wav',
             'castle': 'castle.wav',
             'promotion': 'promotion.wav',
+            'rook_sacrifice': 'rook_sacrifice.wav',  # Added the new rook sacrifice sound
         }
 
         for sound_name, filename in sound_files.items():
@@ -232,16 +233,25 @@ class SimpleChess:
 
     def play_sound(self, move):
         """Play appropriate sound for move"""
+        # Check for checkmate first (highest priority)
         if self.gs.checkMate:
             sound = SOUNDS.get('checkmate')
+        # Check for check
         elif self.gs.inCheck():
             sound = SOUNDS.get('check')
+        # Check for castling
         elif move.isCastleMove:
             sound = SOUNDS.get('castle')
+        # Check for pawn promotion
         elif move.isPawnPromotion:
             sound = SOUNDS.get('promotion')
+        # Check if a rook was captured (NEW CODE!)
+        elif move.pieceCaptured != '--' and move.pieceCaptured[1] == 'R':
+            sound = SOUNDS.get('rook_sacrifice')
+        # Check for any other capture
         elif move.pieceCaptured != '--':
             sound = SOUNDS.get('capture')
+        # Regular move
         else:
             sound = SOUNDS.get('move')
 
